@@ -10,8 +10,8 @@ for jmeno, pocet_bodu in pisemka_body.items():
         pisemka_prospech[jmeno] = "Fail" 
 
 with open("prospech.json", mode='w', encoding='utf-8') as output_file:
-    print(pisemka_prospech, file=output_file)
-
+    #print(pisemka_prospech, file=output_file)
+    json.dump(pisemka_prospech, output_file, ensure_ascii=False)
 
 #BONUS
 
@@ -38,4 +38,5 @@ for jmeno, pocet_bodu in pisemka_body.items():
         znamky[jmeno] = "5"
 
 with open("znamky.json", mode='w', encoding='utf-8') as output2_file:
-    print(znamky, file=output2_file)
+    #print(znamky, file=output2_file)
+    json.dump(znamky, output2_file, ensure_ascii=False)
